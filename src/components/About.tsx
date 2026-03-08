@@ -28,13 +28,13 @@ export default function About() {
 
         <div className="about-info fade-in" ref={infoRef}>
           {/* TODO: Fill in your real details below */}
-          <InfoRow label="Name" value="Ishan Sharma" />
+          <InfoRow label="Name" value="ISHAN SHARMA" />
           <InfoRow label="Degree" value="B.Tech — CSE (Data Science)" />
-          <InfoRow label="University" value="YOUR UNIVERSITY NAME" />
-          <InfoRow label="Year" value="YOUR CURRENT YEAR" />
-          <InfoRow label="Location" value="YOUR CITY, India" />
-          <InfoRow label="Email" value="YOUR@EMAIL.COM" />
-          <InfoRow label="Website" value="ishansharma.tech" />
+          <InfoRow label="University" value="NIIT UNIVERSITY NEEMRANA" />
+          <InfoRow label="Year" value="3^rd YEAR" />
+          <InfoRow label="Location" value="SONIPAT,HARYANA,India" />
+          <InfoRow label="Email" value="ishan.sharma23@st.niituniversity.in" />
+          <InfoRow label="Website" value="ishanhiking.com" />
         </div>
       </div>
     </section>
