@@ -1,7 +1,7 @@
 // TODO: Replace this import with your actual photo:
 //   1. Drop your image file into src/assets/  (e.g. profile.jpg)
 //   2. Change the import below to:  import profileImg from '../assets/profile.jpg'
-import profileImg from '../assets/placeholder-profile.svg'
+import profileImg from '../assets/ishanphoto.jpeg'
 import { useState, useEffect, useRef, useCallback } from 'react'
 
 function useTypingEffect(words: string[], typingSpeed = 100, deletingSpeed = 60, pauseTime = 1800) {
