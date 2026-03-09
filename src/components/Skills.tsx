@@ -1,12 +1,12 @@
 import { useFadeIn } from '../hooks'
 
 const SKILLS = [
-  { title: 'Languages', tags: ['Python', 'R', 'Java', 'SQL'] },
-  { title: 'Data Science', tags: ['Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'Seaborn', 'Jupyter'] },
+  { title: 'Languages', tags: ['Python', 'R', 'SQL'] },
+  { title: 'Data Science', tags: ['Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'Seaborn'] },
   { title: 'Frontend', tags: ['React', 'HTML', 'CSS'] },
   { title: 'Backend & Database', tags: ['Node.js', 'Express.js', 'MongoDB', 'MySQL'] },
   { title: 'DevOps & Tools', tags: ['Docker', 'Jenkins', 'Git', 'GitHub', 'Postman'] },
-  { title: 'Digital Marketing', tags: ['Google Analytics', 'SEO', 'Google Ads', 'Meta Ads', 'Canva', 'Mailchimp', 'HubSpot'] },
+  { title: 'Digital Marketing', tags: ['Google Analytics', 'SEO', 'Google Ads', 'Meta Ads', 'Mailchimp', 'WordPress'] },
 ]
 
 export default function Skills() {
