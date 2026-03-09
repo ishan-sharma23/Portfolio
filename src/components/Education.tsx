@@ -3,26 +3,26 @@ import { useFadeIn } from '../hooks'
 // TODO: Replace with your real education details
 const EDUCATION = [
   {
-    year: '2022 — 2026',
+    year: '2023 — 2027',
     degree: 'B.Tech — Computer Science & Engineering',
-    school: 'Specialisation: Data Science  ·  YOUR UNIVERSITY  ·  CGPA: X.XX / 10',
+    school: 'Specialisation: Data Science  ·  NIIT UNIVERSITY NEEMRANA  ·  CGPA: 7.37',
   },
   {
-    year: '20XX',
-    degree: 'Class XII — CBSE / STATE BOARD',
-    school: 'YOUR SCHOOL NAME  ·  Percentage / Grade: XX%',
+    year: '2022-2023',
+    degree: 'Class XII — CBSE ',
+    school: 'RISHIKUL VIDYAPEETH SONIPAT  ·  Percentage: 82.2%',
   },
   {
-    year: '20XX',
-    degree: 'Class X — CBSE / STATE BOARD',
-    school: 'YOUR SCHOOL NAME  ·  Percentage / Grade: XX%',
+    year: '2020-2021',
+    degree: 'Class X — CBSE ',
+    school: 'RISHIKUL VIDYAPEETH SONIPAT  ·  Percentage: 96%',
   },
 ]
 
 const ACTIVITIES = [
   {
     role: 'Basketball Coordinator',
-    org: 'YOUR UNIVERSITY / COLLEGE NAME',
+    org: 'NIIT UNIVERSITY NEEMRANA',
     desc: 'Currently serving as the Basketball Coordinator, organising tournaments, managing teams, and fostering a competitive sports culture on campus.',
   },
   // Add more activities here if needed
