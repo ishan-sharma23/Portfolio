@@ -25,15 +25,15 @@ export default function Contact() {
       <h2 className="section-title">Let's Connect</h2>
 
       {/* TODO: Replace with your real email */}
-      <a href="mailto:YOUR@EMAIL.COM" className="contact-email fade-in" ref={emailRef as React.Ref<HTMLAnchorElement>}>
-        YOUR@EMAIL.COM
+      <a href="mailto:ishan.sharma23@st.niituniversity.in" className="contact-email fade-in" ref={emailRef as React.Ref<HTMLAnchorElement>}>
+        ishan.sharma23@st.niituniversity.in
       </a>
 
       <div className="social-links fade-in" ref={linksRef}>
         {/* TODO: Replace href="#" with your real profile URLs */}
-        <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+        <a href="https://github.com/ishan-sharma23" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/ishan-sharma-279b59253/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        
       </div>
 
       <form className="contact-form fade-in" ref={formRef as React.Ref<HTMLFormElement>} onSubmit={handleSubmit}>
