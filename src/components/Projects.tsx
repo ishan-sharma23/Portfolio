@@ -4,7 +4,7 @@ import { useFadeIn } from '../hooks'
 const PROJECTS = [
   {
     num: '01',
-    title: 'YOUR PROJECT TITLE',
+    title: 'Fake News Detection System using Machine Learning ',
     desc: '2–3 sentences: what does it do, what problem does it solve, and what result did it achieve? (e.g. "Achieved 94% accuracy on test set")',
     stack: ['Python', 'Scikit-learn', 'Pandas'],
     github: '#',
@@ -12,7 +12,7 @@ const PROJECTS = [
   },
   {
     num: '02',
-    title: 'YOUR PROJECT TITLE',
+    title: 'Air Quality Monitoring and Prediction System ',
     desc: '2–3 sentences describing the project, problem solved, and key result or impact.',
     stack: ['React', 'Node.js', 'MongoDB', 'Express.js'],
     github: '#',
@@ -20,7 +20,7 @@ const PROJECTS = [
   },
   {
     num: '03',
-    title: 'YOUR PROJECT TITLE',
+    title: 'Personal Blog Page ',
     desc: '2–3 sentences describing the project, problem solved, and key result or impact.',
     stack: ['Python', 'MySQL', 'Docker'],
     github: '#',

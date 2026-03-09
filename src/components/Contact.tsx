@@ -71,10 +71,7 @@ export default function Contact() {
         </button>
       </form>
 
-      {/* TODO: Link to your real resume PDF */}
-      <a href="#" className="btn btn-outline" target="_blank" rel="noopener noreferrer" style={{ marginTop: '2rem', display: 'inline-block' }}>
-        Download Resume
-      </a>
+    
     </section>
   )
 }
