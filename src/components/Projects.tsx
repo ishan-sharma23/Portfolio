@@ -5,24 +5,23 @@ const PROJECTS = [
   {
     num: '01',
     title: 'Fake News Detection System using Machine Learning ',
-    desc: '2–3 sentences: what does it do, what problem does it solve, and what result did it achieve? (e.g. "Achieved 94% accuracy on test set")',
-    stack: ['Python', 'Scikit-learn', 'Pandas'],
+    desc: 'An AI-powered web application that detects fake news in real-time using NLP and ensemble machine learning, providing instant verification with confidence scores. Built with MERN stack featuring responsive pages, user authentication, and ML model integration achieving high classification accuracy.',
+    stack: ['Python', 'Scikit-learn', 'NLTK', 'TF-IDF', 'Random Forest', 'Voting Classifier', 'JWT', 'Tailwind CSS'],
     github: '#',
-    demo: '#',
   },
   {
     num: '02',
     title: 'Air Quality Monitoring and Prediction System ',
-    desc: '2–3 sentences describing the project, problem solved, and key result or impact.',
-    stack: ['React', 'Node.js', 'MongoDB', 'Express.js'],
+    desc: 'Developed a satellite-based machine learning model to estimate PM₂.₅ and PM₁₀ using Sentinel-5P, meteorological, and land surface data. The system generates spatial PM predictions and AQI mapping for regions with limited ground monitoring.',
+    stack: ['Google Earth Engine', 'Python', 'Random Forest', 'Linear Regression', 'Sentinel-5P', 'Sentinel-2', 'ERA5'],
     github: '#',
-    demo: '#',
+    
   },
   {
     num: '03',
     title: 'Personal Blog Page ',
-    desc: '2–3 sentences describing the project, problem solved, and key result or impact.',
-    stack: ['Python', 'MySQL', 'Docker'],
+    desc: 'Developed a personal travel and adventure blog to share trekking experiences, travel guides, and information about spiritual destinations across India. The platform helps readers discover lesser-known places and plan trips through detailed blogs and insights. Built to strengthen content creation, digital presence, and community engagement.',
+    stack: ['WordPress', 'SEO tools', 'Google Analytics', 'optimization plugins'],
     github: '#',
   },
 ]
