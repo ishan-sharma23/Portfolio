@@ -2,10 +2,9 @@ import { useFadeIn } from '../hooks'
 
 // TODO: Replace with your real certifications
 const CERTS = [
-  { name: 'Digital Marketing', issuer: 'ISSUER NAME  ·  YEAR' },
-  { name: 'CERTIFICATION NAME', issuer: 'ISSUER NAME  ·  YEAR' },
-  { name: 'CERTIFICATION NAME', issuer: 'ISSUER NAME  ·  YEAR' },
-  { name: 'CERTIFICATION NAME', issuer: 'ISSUER NAME  ·  YEAR' },
+  { name: 'Python + DSA', issuer: ' UDEMY  · 2026' },
+  { name: 'Power BI Desktop', issuer: 'INFOSYS SPRINGBOARD   ·  2025' },
+  { name: 'Digital Marketing', issuer: 'DIDM INSTITUTE  ·  2025' },
 ]
 
 export default function Certifications() {
