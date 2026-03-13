@@ -2,6 +2,9 @@ import { useFadeIn } from '../hooks'
 import { useState, useCallback } from 'react'
 import type { FormEvent } from 'react'
 
+const CONTACT_EMAIL = 'ishan.sharma23@st.niituniversity.in'
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
+
 export default function Contact() {
   const emailRef = useFadeIn()
   const linksRef = useFadeIn()
@@ -9,15 +12,45 @@ export default function Contact() {
 
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = useCallback((e: FormEvent) => {
+  const handleSubmit = useCallback(async (e: FormEvent) => {
     e.preventDefault()
-    // TODO: Wire this to your backend / email service (e.g. Formspree, EmailJS, Netlify Forms)
-    // For now it just shows a success state
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 4000)
-    setForm({ name: '', email: '', message: '' })
-  }, [])
+
+    setError('')
+    setSubmitting(true)
+
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: `Portfolio Contact from ${form.name}`,
+          _captcha: 'false',
+          _template: 'table',
+        }),
+      })
+
+      if (!res.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      setSubmitted(true)
+      setTimeout(() => setSubmitted(false), 4000)
+      setForm({ name: '', email: '', message: '' })
+    } catch {
+      setError('Message could not be sent right now. Please email me directly.')
+    } finally {
+      setSubmitting(false)
+    }
+  }, [form])
 
   return (
     <section id="contact">
@@ -25,8 +58,8 @@ export default function Contact() {
       <h2 className="section-title">Let's Connect</h2>
 
       {/* TODO: Replace with your real email */}
-      <a href="mailto:ishan.sharma23@st.niituniversity.in" className="contact-email fade-in" ref={emailRef as React.Ref<HTMLAnchorElement>}>
-        ishan.sharma23@st.niituniversity.in
+      <a href={`mailto:${CONTACT_EMAIL}`} className="contact-email fade-in" ref={emailRef as React.Ref<HTMLAnchorElement>}>
+        {CONTACT_EMAIL}
       </a>
 
       <div className="social-links fade-in" ref={linksRef}>
@@ -67,8 +100,9 @@ export default function Contact() {
           />
         </div>
         <button type="submit" className="btn btn-primary" style={{ marginTop: '1rem' }}>
-          {submitted ? '✓ Sent!' : 'Send Message'}
+          {submitting ? 'Sending...' : submitted ? '✓ Sent!' : 'Send Message'}
         </button>
+        {error && <p style={{ marginTop: '0.8rem', color: '#ff7b7b', fontSize: '0.78rem' }}>{error}</p>}
       </form>
 
     
