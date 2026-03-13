@@ -29,7 +29,7 @@ const PROJECTS = [
     title: 'Personal Blog Page ',
     desc: 'Developed a personal travel and adventure blog to share trekking experiences, travel guides, and information about spiritual destinations across India. The platform helps readers discover lesser-known places and plan trips through detailed blogs and insights. Built to strengthen content creation, digital presence, and community engagement.',
     stack: ['WordPress', 'SEO tools', 'Google Analytics', 'optimization plugins'],
-    github: '#https://ishanhiking.com/',
+    website: 'https://ishanhiking.com/',
   },
 ]
 
@@ -47,9 +47,9 @@ export default function Projects() {
   )
 }
 
-function ProjectCard({ num, title, desc, stack, github, demo }: {
+function ProjectCard({ num, title, desc, stack, github, website, demo }: {
   num: string; title: string; desc: string;
-  stack: string[]; github: string; demo?: string
+  stack: string[]; github?: string; website?: string; demo?: string
 }) {
   const ref = useFadeIn()
   return (
@@ -61,9 +61,11 @@ function ProjectCard({ num, title, desc, stack, github, demo }: {
         {stack.map(t => <span className="tag" key={t}>{t}</span>)}
       </div>
       <div className="project-links">
-        <a href={github} target="_blank" rel="noopener noreferrer">GitHub →</a>
+        {github && <a href={github} target="_blank" rel="noopener noreferrer">GitHub →</a>}
+        {website && <a href={website} target="_blank" rel="noopener noreferrer">WEBSITE →</a>}
         {demo && <a href={demo} target="_blank" rel="noopener noreferrer">Live Demo →</a>}
       </div>
     </div>
   )
 }
+

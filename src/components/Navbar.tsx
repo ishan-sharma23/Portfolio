@@ -25,6 +25,19 @@ export default function Navbar({ items, activeSection }: NavbarProps) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    document.body.classList.toggle('nav-open', menuOpen)
+    return () => document.body.classList.remove('nav-open')
+  }, [menuOpen])
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth > 768) setMenuOpen(false)
+    }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
   const toggleMenu = useCallback(() => setMenuOpen(prev => !prev), [])
   const closeMenu = useCallback(() => setMenuOpen(false), [])
 
