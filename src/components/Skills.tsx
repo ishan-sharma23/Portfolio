@@ -5,7 +5,7 @@ const SKILLS = [
   { title: 'Data Science', tags: ['Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib', 'Seaborn'] },
   { title: 'Frontend', tags: ['React', 'HTML', 'CSS'] },
   { title: 'Backend & Database', tags: ['Node.js', 'Express.js', 'MongoDB', 'MySQL'] },
-  { title: 'DevOps & Tools', tags: ['Docker', 'Jenkins', 'Git', 'GitHub', 'Postman'] },
+  { title: 'DevOps & Tools', tags: ['Docker', 'Jenkins', 'Git', 'GitHub', 'Postman','Power BI'] },
   { title: 'Digital Marketing', tags: ['Google Analytics', 'SEO', 'Google Ads', 'Meta Ads', 'Mailchimp', 'WordPress'] },
 ]
 
