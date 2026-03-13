@@ -5,31 +5,45 @@ import profileImg from '../assets/ishanphoto.jpeg'
 import { useState, useEffect, useRef, useCallback } from 'react'
 
 function useTypingEffect(words: string[], typingSpeed = 100, deletingSpeed = 60, pauseTime = 1800) {
-  const [text, setText] = useState('')
+  const [charIndex, setCharIndex] = useState(0)
   const [wordIndex, setWordIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
-    const current = words[wordIndex]
+    const currentWord = words[wordIndex] ?? ''
+    const isWordComplete = charIndex === currentWord.length
+    const isWordEmpty = charIndex === 0
+
+    const delay = !isDeleting && isWordComplete
+      ? pauseTime
+      : isDeleting
+        ? deletingSpeed
+        : typingSpeed
+
     const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        setText(current.slice(0, text.length + 1))
-        if (text.length + 1 === current.length) {
-          setTimeout(() => setIsDeleting(true), pauseTime)
-        }
-      } else {
-        setText(current.slice(0, text.length - 1))
-        if (text.length === 0) {
-          setIsDeleting(false)
-          setWordIndex((prev) => (prev + 1) % words.length)
-        }
+      if (!isDeleting && !isWordComplete) {
+        setCharIndex(prev => prev + 1)
+        return
       }
-    }, isDeleting ? deletingSpeed : typingSpeed)
+
+      if (!isDeleting && isWordComplete) {
+        setIsDeleting(true)
+        return
+      }
+
+      if (isDeleting && !isWordEmpty) {
+        setCharIndex(prev => prev - 1)
+        return
+      }
+
+      setIsDeleting(false)
+      setWordIndex(prev => (prev + 1) % words.length)
+    }, delay)
 
     return () => clearTimeout(timeout)
-  }, [text, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseTime])
+  }, [charIndex, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseTime])
 
-  return text
+  return (words[wordIndex] ?? '').slice(0, charIndex)
 }
 
 function ParticleCanvas() {
