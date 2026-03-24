@@ -24,8 +24,15 @@ const PROJECTS = [
   stack: ['Power BI', 'DAX', 'Power Query', 'Bing Maps', 'PowerPoint'],
   github: 'https://github.com/ishan-sharma23/bank-transactions-powerbi',
  },
+ {
+  num: '04',
+  title: 'Car Sales Analytics Dashboard',
+  desc: 'Interactive Tableau dashboard analyzing car sales data (2020–2021) with YTD KPIs, weekly sales trends, body style & colour distribution, dealer region breakdown, and company-wise sales grid using calculated fields and filters.',
+  stack: ['Tableau', 'Data Visualization', 'Calculated Fields', 'Filters & Parameters'],
+  github: 'https://github.com/ishan-sharma23/Car-Sales-Tableau-Dashboard',
+ },
   {
-    num: '04',
+    num: '05',
     title: 'Personal Blog Page ',
     desc: 'Developed a personal travel and adventure blog to share trekking experiences, travel guides, and information about spiritual destinations across India. The platform helps readers discover lesser-known places and plan trips through detailed blogs and insights. Built to strengthen content creation, digital presence, and community engagement.',
     stack: ['WordPress', 'SEO tools', 'Google Analytics', 'optimization plugins'],
