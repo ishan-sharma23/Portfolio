@@ -1,9 +1,14 @@
 import { useFadeIn } from '../hooks'
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import type { FormEvent } from 'react'
+import emailjs from '@emailjs/browser'
 
 const CONTACT_EMAIL = 'ishan.sharma23@st.niituniversity.in'
-const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
+
+// TODO: Get these from https://dashboard.emailjs.com/
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'
 
 export default function Contact() {
   const emailRef = useFadeIn()
@@ -15,32 +20,35 @@ export default function Contact() {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
 
+  // Initialize EmailJS
+  useEffect(() => {
+    if (EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
+      emailjs.init(EMAILJS_PUBLIC_KEY)
+    }
+  }, [])
+
   const handleSubmit = useCallback(async (e: FormEvent) => {
     e.preventDefault()
+
+    if (EMAILJS_SERVICE_ID === 'YOUR_SERVICE_ID' || EMAILJS_TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
+      setError('Email service not configured. Please check your EmailJS credentials.')
+      return
+    }
 
     setError('')
     setSubmitting(true)
 
     try {
-      const res = await fetch(FORM_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
           message: form.message,
-          _subject: `Portfolio Contact from ${form.name}`,
-          _captcha: 'false',
-          _template: 'table',
-        }),
-      })
-
-      if (!res.ok) {
-        throw new Error('Failed to send message')
-      }
+          to_email: CONTACT_EMAIL,
+        }
+      )
 
       setSubmitted(true)
       setTimeout(() => setSubmitted(false), 4000)

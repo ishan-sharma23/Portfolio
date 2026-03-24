@@ -14,7 +14,6 @@ const PROJECTS = [
     title: 'Air Quality Monitoring and Prediction System ',
     desc: 'Developed a satellite-based machine learning model to estimate PM₂.₅ and PM₁₀ using Sentinel-5P, meteorological, and land surface data. The system generates spatial PM predictions and AQI mapping for regions with limited ground monitoring.',
     stack: ['Google Earth Engine', 'Python', 'Random Forest', 'Linear Regression', 'Sentinel-5P', 'Sentinel-2', 'ERA5'],
-    github: 'https://github.com/ishan-sharma23/Air-quality-monitoring-system',
     
   },
   {
