@@ -6,9 +6,9 @@ import emailjs from '@emailjs/browser'
 const CONTACT_EMAIL = 'ishan.sharma23@st.niituniversity.in'
 
 // TODO: Get these from https://dashboard.emailjs.com/
-const EMAILJS_SERVICE_ID = 'service_2374jj8'
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
-const EMAILJS_PUBLIC_KEY = 'I_oXJm-8lputaxl8w'
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'
 
 export default function Contact() {
   const emailRef = useFadeIn()
