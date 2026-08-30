@@ -152,7 +152,7 @@ export default function Hero() {
           <a href="#projects" className="btn btn-primary">View Projects</a>
           <a href="#contact" className="btn btn-outline">Get In Touch</a>
           {/* TODO: Replace href with your actual resume PDF link */}
-          <a href="/ISHAN_SHARMA_CV.pdf" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+          <a href="ISHAN SHARMA-CV(DS&FS)_f.pdf" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
             Download CV
           </a>
         </div>

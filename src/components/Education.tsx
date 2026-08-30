@@ -5,7 +5,7 @@ const EDUCATION = [
   {
     year: '2023 — 2027',
     degree: 'B.Tech — Computer Science & Engineering',
-    school: 'Specialisation: Data Science  ·  NIIT UNIVERSITY NEEMRANA  ·  CGPA: 7.37',
+    school: 'Specialisation: Data Science  ·  NIIT UNIVERSITY NEEMRANA  ·  CGPA: 7.46',
   },
   {
     year: '2022-2023',
@@ -23,7 +23,7 @@ const ACTIVITIES = [
   {
     role: 'Basketball Coordinator',
     org: 'NIIT UNIVERSITY NEEMRANA',
-    desc: 'Currently serving as the Basketball Coordinator, organising tournaments, managing teams, and fostering a competitive sports culture on campus.',
+    desc: 'Served as the Basketball Coordinator, organizing tournaments, managing teams, and fostering a competitive sports culture on campus while developing leadership and event-management skills.',
   },
   // Add more activities here if needed
 ]

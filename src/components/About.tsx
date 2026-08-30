@@ -31,10 +31,11 @@ export default function About() {
           <InfoRow label="Name" value="Ishan Sharma" />
           <InfoRow label="Degree" value="B.Tech—CSE(Data Science)" />
           <InfoRow label="University" value="NIIT University Neemrana" />
-          <InfoRow label="Year" value="3rd YEAR" />
+          <InfoRow label="Year" value="4th YEAR" />
           <InfoRow label="Location" value="Neemrana,Rajasthan,India" />
-          <InfoRow label="Email" value="ishan.sharma23@st.niituniversity.in,
-          d.sharmaishan23@gmail.com" />
+          <InfoRow label="Email" value="d.sharmaishan23@gmail.com,
+          ishan.sharma23@st.niituniversity.in
+          " />
           
         </div>
       </div>
