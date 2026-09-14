@@ -4,41 +4,48 @@ import { useFadeIn } from '../hooks'
 const PROJECTS = [
   {
     num: '01',
+    title: 'Clinical Decision Support System using RAG',
+    desc: 'An AI-powered clinical decision support system that uses Retrieval-Augmented Generation (RAG) to provide evidence-based answers from the 2022 AHA/ACC/HFSA Heart Failure Guidelines. Integrates CDS Hooks and FHIR for context-aware clinical recommendations, with a LangGraph-based RAG pipeline, Streamlit interface, and Dockerized deployment.',
+    stack: ['Python', 'LangChain', 'LangGraph', 'RAG', 'Groq (Llama 3.1)', 'ChromaDB', 'FastAPI', 'Streamlit', 'CDS Hooks', 'FHIR', 'Docker'],
+    github: 'https://github.com/ishan-sharma23/Clinical-Decision-Support-RAG',
+  },
+  {
+    num: '02',
     title: 'Fake News Detection System using Machine Learning ',
     desc: 'An AI-powered web application that detects fake news in real-time using NLP and ensemble machine learning, providing instant verification with confidence scores. Built with MERN stack featuring responsive pages, user authentication, and ML model integration achieving high classification accuracy.',
     stack: ['Python', 'Scikit-learn', 'NLTK', 'TF-IDF', 'Random Forest', 'Voting Classifier', 'JWT', 'Tailwind CSS'],
     github: 'https://github.com/ishan-sharma23/fakenews-project',
   },
   {
-    num: '02',
+    num: '03',
     title: 'Multiple-PDFs Reader ',
     desc: 'AI-powered MultiPDF chatbot that uses RAG, embeddings, and semantic search to answer user queries from multiple uploaded PDF documents.Enables users to efficiently retrieve relevant information and generate context-aware answers from multiple documents.',
     stack: ["Python", "Streamlit", "LangChain", "RAG", "Google Gemini API", "FAISS", "PyPDF2"],
     github: 'https://github.com/ishan-sharma23/multiple-pdfs-reader',
   },
   {
-    num: '03',
+    num: '04',
     title: 'Lavender Crop Field Mapping Using Fuzzy Machine Learning ',
     desc: 'Developed a fuzzy machine learning-based approach for mapping Lavender crop fields using temporal satellite imagery, comparing PCM and Noise Clustering classifiers with different training sample selection techniques to improve classification accuracy and handle crop-field heterogeneity.',
     stack: ['PlanetScope Satellite Imagery', 'CBSI-MSAVI2', 'MSAVI2', 'PCM', 'NC', 'Fuzzy Machine Learning', 'MMD'],
     
   },
   {
-    num: '04',
+    num: '05',
     title: 'Air Quality Monitoring and Prediction System ',
     desc: 'Developed a satellite-based machine learning model to estimate PM₂.₅ and PM₁₀ using Sentinel-5P, meteorological, and land surface data. The system generates spatial PM predictions and AQI mapping for regions with limited ground monitoring.',
     stack: ['Google Earth Engine', 'Python', 'Random Forest', 'Linear Regression', 'Sentinel-5P', 'Sentinel-2', 'ERA5'],
     
   },
   {
-  num: '05',
+  num: '06',
   title: 'Bank Transactions Report & Fraud Detection Dashboard',
   desc: 'Interactive 3-page Power BI dashboard analyzing bank transactions with fraud detection, geospatial mapping, and drillthrough insights using DAX measures and conditional formatting.',
   stack: ['Power BI', 'DAX', 'Power Query', 'Bing Maps', 'PowerPoint'],
   github: 'https://github.com/ishan-sharma23/bank-transactions-powerbi',
  },
  {
-  num: '06',
+  num: '07',
   title: 'Car Sales Analytics Dashboard',
   desc: 'Interactive Tableau dashboard analyzing car sales data (2020–2021) with YTD KPIs, weekly sales trends, body style & colour distribution, dealer region breakdown, and company-wise sales grid using calculated fields and filters.',
   stack: ['Tableau', 'Data Visualization', 'Calculated Fields', 'Filters & Parameters'],
